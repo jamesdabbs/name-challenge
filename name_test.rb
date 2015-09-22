@@ -1,4 +1,26 @@
 require 'minitest/autorun'
+require 'pry'
+
+class Person
+  attr_accessor :name
+  # def name
+  #   @name
+  # end
+  # def name= new_name
+  #   @name = new_name
+  # end
+
+  def initialize given_name
+    self.name = given_name
+  end
+
+  def angry_name
+    name.upcase + "!!!"
+  end
+end
+
+# binding.pry
+
 
 class PersonTest < Minitest::Test
   def test_people_know_their_name
